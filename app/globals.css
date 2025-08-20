@@ -1,26 +1,166 @@
+/* Import Tailwind's new v4 base styles, components, and utilities */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * Use the @theme directive to define and extend Tailwind's theme.
+ * This replaces the `theme.extend` section from your old config file.
+*/
+@theme {
+    --screen-2xl: 1400px;
+
+    --radius: 0.5rem;
+    --radius-lg: var(--radius);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+
+    /* Custom palette from old config */
+    --color-black: #000;
+    --color-black-100: #000319;
+    --color-black-200: rgba(17, 25, 40, 0.75);
+    --color-black-300: rgba(255, 255, 255, 0.125);
+    --color-white: #FFF;
+    --color-white-100: #BEC1DD;
+    --color-white-200: #C1C2D3;
+    --color-blue-100: #E4ECFF;
+    --color-purple: #CBACF9;
+}
+
+@layer base {
+    /* Define all your color variables here for both light and dark modes */
+    :root {
+        /* Light Mode Semantic Colors (shadcn/ui pattern) */
+        --background: 0 0% 100%;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 240 5.9% 10%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 5.9% 90%;
+        --input: 240 5.9% 90%;
+        --ring: 240 10% 3.9%;
+    }
+
+    .dark {
+        /* Dark Mode Semantic Colors */
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+    }
+
+    /* Your global base styles remain the same */
+    * {
+        border-color: hsl(var(--border));
+        @apply !scroll-smooth;
+    }
+    body {
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+    }
+    button {
+        @apply active:outline-none;
+    }
+}
+
+/* Your custom utility classes also remain the same */
+@layer utilities {
+    .heading {
+        @apply font-bold text-4xl md:text-5xl text-center;
+    }
+
+    .black-gradient {
+        background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
+    }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+    --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+    @keyframes spotlight {
+        0% {
+            opacity: 0;
+            transform: translate(-72%, -62%) scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-50%, -40%) scale(1);
+        }
+    }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    --animate-first: moveVertical 30s ease infinite;
+    --animate-second: moveInCircle 20s reverse infinite;
+    --animate-third: moveInCircle 40s linear infinite;
+    --animate-fourth: moveHorizontal 40s ease infinite;
+    --animate-fifth: moveInCircle 20s ease infinite;
+
+    @keyframes moveHorizontal {
+        0% {
+            transform: translateX(-50%) translateY(-10%);
+        }
+        50% {
+            transform: translateX(50%) translateY(10%);
+        }
+        100% {
+            transform: translateX(-50%) translateY(-10%);
+        }
+    }
+
+    @keyframes moveInCircle {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes moveVertical {
+        0% {
+            transform: translateY(-50%);
+        }
+        50% {
+            transform: translateY(50%);
+        }
+        100% {
+            transform: translateY(-50%);
+        }
+    }
+
+    --animation-duration: 40s;
+    --animation-direction: forwards;
+    --animate-scroll: scroll var(--animation-duration) var(--animation-direction) linear infinite;
+
+    @keyframes scroll {
+        to {
+            transform: translate(calc(-50% - 0.5rem));
+        }
+    }
 }
