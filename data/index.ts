@@ -79,18 +79,19 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "StoreIt - Storage and File Sharing Platform",
-    des: "A storage management and file sharing platform that lets users effortlessly upload, organize, and share files. Built with the latest Next.js 15 and other advanced features.",
-    img: "/p1.png",
+    title: "BookWise - Library Management System",
+    des: "Built with Next.js, TypeScript, and Postgres, the Library Management System is a production-grade platform featuring a public-facing app and an admin interface.",
+    img: "/p3.png",
     iconLists: [
-      "/re.svg",
       "/next.svg",
-      "/ts.svg",
       "/tail.svg",
-      "/appwrite.svg",
-      "/shadcn.svg",
+      "/ts.svg",
+      "/pg.svg",
+      "/upstash.svg",
+      "syncfusion.svg",
     ],
-    link: "https://store-it-dun-iota.vercel.app",
+    link: "https://university-library-iota-ecru.vercel.app",
+    
   },
   {
     id: 2,
@@ -109,23 +110,23 @@ export const projects = [
   },
   {
     id: 3,
-    title: "BookWise - Library Management System",
-    des: "Built with Next.js, TypeScript, and Postgres, the system is a production-grade platform featuring a public-facing app and an admin interface.",
-    img: "/p3.png",
+    title: "StoreIt - Storage and File Sharing Platform",
+    des: "A storage management and file sharing platform that lets users effortlessly upload, organize, and share files. Built with the latest Next.js 15 and other advanced features.",
+    img: "/p1.png",
     iconLists: [
+      "/re.svg",
       "/next.svg",
-      "/tail.svg",
       "/ts.svg",
-      "/pg.svg",
-      "/upstash.svg",
-      "syncfusion.svg",
+      "/tail.svg",
+      "/appwrite.svg",
+      "/shadcn.svg",
     ],
-    link: "https://university-library-iota-ecru.vercel.app",
+    link: "https://store-it-dun-iota.vercel.app",
   },
   {
     id: 4,
     title: "Converso - LMS SaaS Platform",
-    des: "A real-time teaching app that allows you to create your AI learning companions, who you can listen and ask questions to, anytime, on any subject you're interested in.",
+    des: "A real-time teaching app that allows you to create your AI learning companions, to whom you can listen and pose questions anytime, on any subject you're interested in.",
     img: "/p4.png",
     iconLists: [
       "/next.svg",
@@ -136,72 +137,6 @@ export const projects = [
       "/clerk.jpeg",
     ],
     link: "https://converso-lyart.vercel.app",
-  },
-];
-
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-];
-
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
   },
 ];
 
@@ -241,20 +176,5 @@ export const workExperience = [
     thumbnail: "/exp4.svg",
     width: 123,
     height: 87,
-  },
-];
-
-export const socialMedia = [
-  {
-    id: 1,
-    img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
-    img: "/link.svg",
   },
 ];

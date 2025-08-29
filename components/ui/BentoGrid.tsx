@@ -111,13 +111,14 @@ export const BentoGridItem = ({
           {id === 2 && <GlobeDemo />}
 
           {id === 3 && (
-            <div className="flex gap-2 lg:gap-5 w-fit absolute -right-3 md:-right-7 md:-top-7 lg:-top-4">
+            <div className="flex gap-2 lg:gap-5 w-fit absolute right-6 md:right-3 lg:-right-9 -top-16 md:-top-16 lg:-top-8">
               <div className="flex flex-col gap-3 lg:gap-5 mt-4 lg:mt-0">
-                <span />
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
                 {[
                   { name: "TypeScript", icon: "/ts.svg" },
                   { name: "React.js", icon: "/re.svg" },
                   { name: "Next.js", icon: "/next.svg" },
+                  { name: "Tailwind", icon: "/tail.svg" }
                 ].map(({ name, icon }, i) => (
                   <span
                     key={i}
@@ -127,12 +128,11 @@ export const BentoGridItem = ({
                     {name}
                   </span>
                 ))}
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
               </div>
-              <div className="flex flex-col gap-3 lg:gap-5 lg:-mt-1">
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
+              <div className="flex flex-col gap-3 lg:gap-5 mt-8 md:mt-8 lg:mt-3">
                 {[
                   { name: "Node.js", icon: "/node.svg" },
+                  { name: "Hono.js", icon: "/hono.svg" },
                   { name: "Django", icon: "/django.svg" },
                   { name: "Postgres", icon: "/pg.svg" },
                 ].map(({ name, icon }, i) => (
@@ -144,6 +144,7 @@ export const BentoGridItem = ({
                     {name}
                   </span>
                 ))}
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
               </div>
             </div>
           )}
