@@ -20,6 +20,7 @@ const Approach = () => {
           <CanvasRevealEffect
             animationSpeed={5.1}
             containerClassName="bg-emerald-900"
+            showGradient={false}
           />
         </Card>
         <Card

@@ -8,8 +8,7 @@ const RecentProjects = () => {
   return (
     <div className="py-20" id="projects">
       <h1 className="heading">
-        A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        A selection of <span className="text-purple">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center gap-x-24 gap-y-8 mt-10">
         {projects.map(({ id, title, des, img, iconLists, link }) => (
@@ -18,22 +17,23 @@ const RecentProjects = () => {
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
           >
             <PinContainer title={link} href={link}>
-              <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
-                <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162D]">
+              <div className="flex items-center justify-center overflow-hidden sm:w-[570px] w-[80vw] sm:h-[40vh] h-[30vh] mb-10">
+                <div className="flex justify-center overflow-hidden w-full h-full lg:rounded-3xl bg-[#13162D]">
                   <Image src="/bg.png" alt="bg-img" fill />
+                  <Image
+                    src={img}
+                    alt={title}
+                    width={464}
+                    height={300}
+                    className="z-10 w-[362px] sm:w-[483px] h-[234px] sm:h-[313px]"
+                  />
                 </div>
-                <Image
-                  src={img}
-                  alt={title}
-                  fill
-                  className="z-10 absolute w-full bottom-0"
-                />
               </div>
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 mb-0 sm:mb-2">
                 {title}
               </h1>
 
-              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
+              <p className="lg:text-base lg:font-normal font-light text-sm line-clamp-3">
                 {des}
               </p>
 

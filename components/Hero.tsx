@@ -2,7 +2,7 @@ import { Spotlight } from "@/components/ui/Spotlight";
 import { TextGenerateEffect } from "@/components/ui/TextGenerateEffect";
 import MagicButton from "@/components/ui/MagicButton";
 import GridBackground from "@/components/ui/GridBackground";
-import { BsFillArrowDownLeftCircleFill } from "react-icons/bs";
+import { FaLocationArrow } from "react-icons/fa6";
 
 const Hero = () => {
   return (
@@ -39,7 +39,7 @@ const Hero = () => {
           <a href="#about">
             <MagicButton
               title="More about me"
-              icon={<BsFillArrowDownLeftCircleFill />}
+              icon={<FaLocationArrow />}
               position="right"
             />
           </a>
